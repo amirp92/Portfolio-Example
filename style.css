@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:300,400,600,700');
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body{
+    font-family: open sans;
+
+}
+.wrapper{
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+header{
+   width: 100%;
+   height: 100vh;
+   background: url('images/code.jpg') no-repeat 50% 50%;
+   background-size: cover;
+   filter: blur(30) brightness(10);
+   position: relative;
+}
+header .content-header{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+header .content-header h1{
+  font-size: 3em;
+  padding-bottom: 15px;
+}
+header .content-header h2{
+  font-size: 1.7em;
+  text-align: center;
+  padding-bottom: 15px;
+}
+header .content-header span{
+  font-family: 'Indie Flower';
+  font-style: italic;
+  padding: 0 5px;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+header .content-header a{
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0);
+  border:1px solid #fff;
+  color: #fff;
+}
+.logo{
+  position: fixed;
+  float: left;
+  margin: 22px 36px;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+}
+nav{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+nav ul {
+  list-style: none;
+  background: rgba(0,0,0,0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: 1s;
+}
+nav.black ul{
+  background: #000;
+}
+nav ul li{
+  display: inline-block;
+  padding: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+.menu-icon {
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+@media(max-width:768px){
+  nav ul{
+    text-align: right;
+  }
+}
+@media(max-width:580px){
+  .logo{
+    position: fixed;
+    top: 0;
+    margin-top: 20px;
+  }
+  nav ul{
+    max-height: 0px;
+    background: #000;
+  }
+  nav.black ul{
+    background-color: #000;
+  }
+  .showing{
+    max-height: 20em;
+  }
+  nav ul li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 0;
+    text-align: center;
+  }
+  .menu-icon{
+    display: block;
+  }
+}
+
+/* ################################################
+####                ABOUT                      ####
+#################################################*/
+#about{
+  overflow: hidden;
+  max-width: 100%;
+  padding:8% 5%;
+  height: 65vh;
+  background: #E6FAFC;
+  text-shadow: 0.5px 0px #d6d6d6;
+}
+.about-image{
+  height: 100%;
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+}
+.about-image img{
+  filter: grayscale(30%);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px #333;
+}
+.about-content{
+  float: right;
+  width: 55%;
+  margin-left: 5%;
+}
+.about-content h2{
+  font-size: 27px;
+  font-weight: 600;
+  padding-bottom: 5%;;
+}
+.about-content p{
+  font-size: 1.1em;
+  line-height: 25px;
+  padding-top: 5%;
+}
+@media (max-width:992px) {
+  #about{
+    overflow: hidden;
+    font-size: 0.9em;
+    height: 55vh;
+  }
+}
+@media (max-width:768px){
+  #about {
+    overflow: hidden;
+    height: 65vh;
+    line-height: 20px;
+  }
+  .about-image{
+    padding-top:5%;
+    width: 35%;
+  }
+}
+@media (max-width:580px){
+  #about{
+    height: auto;
+  }
+  .about-image{
+    padding:10% 15% 10% 15%;
+    width: 70%;
+    margin-bottom: 17%;
+  }
+  .about-image img{
+    width: 100%;
+  }
+  .about-content{
+    padding:0% 15% 10% 15%;
+    width: 70%;
+  }
+  .about-content span{
+    padding: 10% 0%;
+  }
+}
+@media (max-width:420px){
+  .about-image{
+    padding:10% 15% 10% 15%;
+    width: 70%;
+    margin-bottom: -1%;
+  }
+  .about-image img{
+    width: 100%;
+  }
+  .about-content{
+    padding:0% 15% 10% 15%;
+    width: 70%;
+  }
+  .about-content span{
+    padding: 10% 0%;
+  }
+}
+
+/* #######################################################
+####                  Services                        ####
+########################################################*/
+
+#services{
+  clear: both;
+  background: #FCD29F;
+  display: flex;
+  max-width: 100%;
+  height: 60vh;
+  padding: 10% 5%;
+  justify-content: space-between;
+}
+#services .offer{
+  padding:1.5%;
+  flex: 1;
+  height: 95%;
+  width: 25%;
+  margin:0% 2.5%;
+  box-shadow:0px 0px 5px 0px #919089;
+  background: #E0DFD5;
+  border-radius: 3px;
+  color: #313638;
+  text-shadow: 0.5px 0px #919089;
+}
+#services .offer h3{
+  font-size:1.5em;
+  padding: 4% 0% 5% 0%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#services .offer h2{
+  display: inline;
+  font-weight: 600;
+  font-size: 2em;
+  float: right;
+  padding: 2%;
+  margin-top: 20%;
+}
+#services .offer h1{
+  font-size: 3em;
+  font-weight: 600;
+  padding:5% 0%;
+}
+#services .offer p{
+  font-size: 1em;
+  padding: 20px 0px;
+}
+#services .offer-bonus{
+  font-style: italic;
+  text-decoration: underline;
+}
+#services .offer button{
+  padding:4%;
+  width: 120px;
+  margin-top: 20%;
+  outline: 0;
+  border: 0;
+  background: #000;
+  font-family: open sans;
+  opacity: 0.9;
+  font-size: 1em;
+  color:#fff;
+  box-shadow: 0px 0px 5px #333;
+  transition: 300ms;
+}
+#services .offer button:focus{
+  background: #8BC34A;
+  font-weight: 600;
+  color: #000;
+  border-radius: 20px;
+}
+#services .offer-1 p{
+  padding-bottom: 9.5%;
+}
+@media (max-width:992px) {
+  #services{
+    margin-top: 0%;
+  }
+  #services .offer p{
+    font-size: 0.9em;
+  }
+}
+@media (max-width:820px) {
+  #services{
+    display: block;
+    height: auto;
+  }
+  #services .offer{
+    font-size: 1em;
+    width:50%;
+    margin:0 auto;
+    margin-top: 8%;
+    height: auto;
+  }
+}
+@media (max-width:520px) {
+  #services .offer{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom:5%;
+  }
+}
+
+/*#################################################
+####                   form                    ####
+#################################################*/
+
+#form{
+  height: 65vh;
+  max-width: 100%;
+  background: #A1FCDF;
+}
+#form h1{
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  background: #34435E;
+  color: #fff;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.form-content{
+  overflow: hidden;
+  padding:5%;
+  padding-bottom: 13%;
+  height: 60vh;
+  background: #C7F0BD;
+  font-size: 1.1em;
+}
+.form-content form{
+  width: 60%;
+  margin:0 auto;
+}
+.form-content form input, textarea{
+  width: 98%;
+  resize: none;
+  font-size: 1em;
+  text-indent:20px;
+  margin:12px 0px;
+}
+.form-content form textarea{
+  font-size: 1.3em;
+  line-height: 24px;
+  padding-top: 3%;
+}
+.form-content form input{
+  height: 35px;
+}
+.form-content button{
+  margin-top: 5px;
+  width: 99%;
+  height: 40px;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid #A8A8A8;
+  color: #333;
+  background: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.form-message {
+  margin-top: 15px;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.form-error {
+	color: red;
+}
+
+.form-success {
+	color: green;
+}
+
+.input-error {
+	box-shadow: 0 0 5px red;
+}
+
+@media (max-width:992px) {
+  #form{
+    height: 70vh;
+  }
+}
+@media (max-width:768px) {
+  .form-content form{
+    width: 70%;
+    font-size: 0.9em;
+  }
+}
+@media (max-width:620px) {
+  #form{
+    height: 75vh;
+  }
+  .form-content{
+    height: auto;
+  }
+  .form-content form{
+    width: 90%;
+    font-size: 0.8em;
+  }
+  .form-content form p{
+    font-size: 0.9em;
+  }
+}
+@media (max-width:420px) {
+  .form-content form{
+    width: 90%;
+    font-size: 0.75em;
+  }
+}
+
+/*##################################################
+####                   footer                   ####
+##################################################*/
+
+footer{
+  margin-top: 15%;
+  z-index: 3;
+  padding: 0 8%;
+  background: #212121;
+  height: 80px;
+  color: #fff;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.follow-links{
+  flex-basis: 30%;
+  line-height: 80px;
+}
+.follow-links i{
+  padding-left: 5%;
+}
+.copyright{
+  flex-basis: 40%;
+  line-height: 80px;
+  text-align: right;
+}
+@media (max-width:620px) {
+  footer{
+    height: 60px;
+    margin-top: 14%;
+    font-size: 0.8em;
+  }
+  .follow-links, .copyright{
+    line-height: 60px;
+    flex-basis:50%;
+  }
+}
+@media (max-width:420px){
+  footer{
+    padding: 0 5%;
+    font-size: 0.7em;
+    margin-top: 17%;
+  }
+}
